@@ -1,9 +1,6 @@
 package org.pgm.jpademo.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -20,4 +17,6 @@ public class ReplyEntity extends BaseEntity {
     private Long bno;
     private String content;
     private String writer;
+    @Transient
+    private String memo;
 }
